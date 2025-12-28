@@ -24,32 +24,32 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#0E7490", // petrol
+          foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#F3F4F6", // lightgrey
+          foreground: "#111827",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
+          DEFAULT: "#C62828", // deepred
           foreground: "hsl(var(--destructive-foreground))",
         },
         success: {
-          DEFAULT: "hsl(var(--success))",
-          foreground: "hsl(var(--success-foreground))",
+          DEFAULT: "#2E7D32", // gammaray
+          foreground: "#ffffff",
         },
         warning: {
           DEFAULT: "hsl(var(--warning))",
           foreground: "hsl(var(--warning-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#F3F4F6", // lightgrey
+          foreground: "#6B7280",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#F3F4F6", // lightgrey
+          foreground: "#111827",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -59,14 +59,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom from HTML
+        crisp: '#E5E7EB',
+        lightgrey: '#F3F4F6',
+        gammaray: '#2E7D32',
+        deepred: '#C62828',
+        resistblue: '#1565C0',
+        neutron: '#0277BD',
+        density: '#D84315',
         petrol: {
-          DEFAULT: "hsl(var(--petrol))",
-          hover: "hsl(var(--petrol-hover))",
+          DEFAULT: '#0E7490',
+          hover: '#0891b2', // slightly lighter for hover
         },
-        gammaray: "hsl(var(--gammaray))",
-        deepred: "hsl(var(--deepred))",
-        neutron: "hsl(var(--neutron))",
-        density: "hsl(var(--density))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

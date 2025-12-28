@@ -39,25 +39,25 @@ export function WellsTable({ wells }: WellsTableProps) {
     switch (status) {
       case 'ready':
         return (
-          <span className="px-2 py-1 bg-success/10 text-success text-[10px] font-semibold rounded">
+          <span className="px-2 py-1 bg-green-100 text-gammaray text-[10px] font-semibold rounded">
             Ready
           </span>
         );
       case 'raw':
         return (
-          <span className="px-2 py-1 bg-muted text-muted-foreground text-[10px] font-semibold rounded">
+          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-[10px] font-semibold rounded">
             Raw
           </span>
         );
       case 'splicing':
         return (
-          <span className="px-2 py-1 bg-warning/10 text-warning-foreground text-[10px] font-semibold rounded border border-warning/20">
+          <span className="px-2 py-1 bg-yellow-100 text-yellow-700 text-[10px] font-semibold rounded">
             Splicing
           </span>
         );
       case 'quality-issue':
         return (
-          <span className="px-2 py-1 bg-destructive/10 text-destructive text-[10px] font-semibold rounded">
+          <span className="px-2 py-1 bg-red-100 text-deepred text-[10px] font-semibold rounded">
             Quality Issue
           </span>
         );
@@ -65,16 +65,16 @@ export function WellsTable({ wells }: WellsTableProps) {
   };
 
   const getQualityBar = (quality: number) => {
-    let barColor = 'bg-success';
+    let barColor = 'bg-gammaray';
     if (quality < 60) {
-      barColor = 'bg-destructive';
+      barColor = 'bg-deepred';
     } else if (quality < 80) {
-      barColor = 'bg-warning';
+      barColor = 'bg-yellow-500';
     }
 
     return (
       <div className="flex items-center space-x-1">
-        <div className="w-12 bg-secondary rounded-full h-1.5">
+        <div className="w-12 bg-gray-200 rounded-full h-1.5">
           <div
             className={`h-1.5 rounded-full ${barColor}`}
             style={{ width: `${quality}%` }}
@@ -86,16 +86,16 @@ export function WellsTable({ wells }: WellsTableProps) {
   };
 
   return (
-    <div className="bg-card border border-border rounded-lg overflow-hidden">
+    <div className="bg-white border border-crisp rounded-lg overflow-hidden">
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>
-            <TableRow className="bg-secondary/50">
+            <TableRow className="bg-lightgrey hover:bg-lightgrey">
               <TableHead className="w-[40px]">
                 <Checkbox
                   checked={selectedWells.length === wells.length && wells.length > 0}
                   onCheckedChange={handleSelectAll}
-                  className="w-3 h-3"
+                  className="w-4 h-4"
                 />
               </TableHead>
               <TableHead className="text-xs font-semibold uppercase tracking-wide">
@@ -137,7 +137,7 @@ export function WellsTable({ wells }: WellsTableProps) {
                   <Checkbox
                     checked={selectedWells.includes(well.id)}
                     onCheckedChange={(checked) => handleSelectWell(well.id, !!checked)}
-                    className="w-3 h-3"
+                    className="w-4 h-4"
                   />
                 </TableCell>
                 <TableCell>

@@ -21,7 +21,7 @@ export function QuickFilters({ filters, onFilterClick }: QuickFiltersProps) {
   };
 
   return (
-    <div className="p-4 border-b border-border">
+    <div className="p-4 border-b border-crisp">
       <h3 className="text-xs font-semibold text-foreground uppercase tracking-wide mb-3">
         Quick Filters
       </h3>

@@ -35,7 +35,7 @@ export function StatCard({ label, value, subtext, type = 'default' }: StatCardPr
   };
 
   return (
-    <div className="bg-background border border-border rounded p-3">
+    <div className="bg-lightgrey border border-crisp rounded p-3">
       <div className="text-[10px] text-muted-foreground uppercase tracking-wide mb-1">
         {label}
       </div>

@@ -8,9 +8,9 @@ import { statsData, processingStatusData, activitiesData, quickFiltersData, fiel
 
 export function Sidebar() {
   return (
-    <aside className="w-80 bg-card border-r border-border flex flex-col min-h-0">
+    <aside className="w-80 bg-white border-r border-crisp flex flex-col min-h-0">
       {/* Header */}
-      <div className="p-4 border-b border-border flex-shrink-0">
+      <div className="p-4 border-b border-crisp flex-shrink-0">
         <h2 className="text-sm font-semibold text-foreground flex items-center">
           <BarChart3 className="h-4 w-4 text-primary mr-2" />
           Data Overview
@@ -20,7 +20,7 @@ export function Sidebar() {
       {/* Scrollable Content */}
       <div className="flex-1 overflow-y-auto">
         {/* Summary Stats */}
-        <div className="p-4 border-b border-border">
+        <div className="p-4 border-b border-crisp">
           <div className="grid grid-cols-2 gap-3">
             <StatCard
               label="Total Wells"

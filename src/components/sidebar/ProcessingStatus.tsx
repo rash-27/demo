@@ -17,7 +17,7 @@ export function ProcessingStatus({ data }: ProcessingStatusProps) {
   };
 
   return (
-    <div className="p-4 border-b border-border">
+    <div className="p-4 border-b border-crisp">
       <h3 className="text-xs font-semibold text-foreground uppercase tracking-wide mb-3">
         Processing Status
       </h3>
@@ -35,7 +35,7 @@ export function ProcessingStatus({ data }: ProcessingStatusProps) {
                   {status.count}
                 </span>
               </div>
-              <div className="w-full bg-secondary rounded-full h-1.5">
+              <div className="w-full bg-crisp rounded-full h-1.5">
                 <div
                   className={`h-1.5 rounded-full ${colors.bar}`}
                   style={{ width: `${status.percentage}%` }}

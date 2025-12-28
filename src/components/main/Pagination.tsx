@@ -20,38 +20,38 @@ export function Pagination({
 
   const getVisiblePages = () => {
     const pages: (number | 'ellipsis')[] = [];
-    
+
     if (totalPages <= 7) {
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
     } else {
       pages.push(1);
-      
+
       if (currentPage > 3) {
         pages.push('ellipsis');
       }
-      
+
       for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 2); i++) {
         if (!pages.includes(i)) {
           pages.push(i);
         }
       }
-      
+
       if (currentPage < totalPages - 3) {
         pages.push('ellipsis');
       }
-      
+
       if (!pages.includes(totalPages)) {
         pages.push(totalPages);
       }
     }
-    
+
     return pages;
   };
 
   return (
-    <div className="mt-4 flex items-center justify-between bg-card border border-border rounded-lg p-3">
+    <div className="mt-4 flex items-center justify-between bg-white border border-crisp rounded-lg p-3">
       <div className="text-xs text-muted-foreground">
         Showing <span className="font-mono font-semibold text-foreground">{startItem}-{endItem}</span> of{' '}
         <span className="font-mono font-semibold text-foreground">{totalItems}</span> wells
@@ -61,7 +61,7 @@ export function Pagination({
         <Button
           variant="outline"
           size="sm"
-          className="h-7 w-7 p-0"
+          className="h-7 w-7 p-0 hover:bg-lightgrey border-crisp"
           disabled={currentPage === 1}
         >
           <ChevronLeft className="h-4 w-4" />
@@ -77,7 +77,7 @@ export function Pagination({
               key={page}
               variant={page === currentPage ? 'default' : 'outline'}
               size="sm"
-              className="h-7 w-7 p-0 text-xs"
+              className={`h-7 w-7 p-0 text-xs ${page !== currentPage ? 'hover:bg-lightgrey border-crisp' : ''}`}
             >
               {page}
             </Button>
@@ -87,7 +87,7 @@ export function Pagination({
         <Button
           variant="outline"
           size="sm"
-          className="h-7 w-7 p-0"
+          className="h-7 w-7 p-0 hover:bg-lightgrey border-crisp"
           disabled={currentPage === totalPages}
         >
           <ChevronRight className="h-4 w-4" />

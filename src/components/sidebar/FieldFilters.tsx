@@ -11,7 +11,7 @@ export function FieldFilters({ filters: initialFilters }: FieldFiltersProps) {
   const [filters, setFilters] = useState(initialFilters);
 
   const handleChange = (id: string, checked: boolean) => {
-    setFilters(filters.map(f => 
+    setFilters(filters.map(f =>
       f.id === id ? { ...f, checked } : f
     ));
   };
@@ -30,7 +30,7 @@ export function FieldFilters({ filters: initialFilters }: FieldFiltersProps) {
             <Checkbox
               checked={filter.checked}
               onCheckedChange={(checked) => handleChange(filter.id, !!checked)}
-              className="w-3 h-3"
+              className="w-4 h-4"
             />
             <span className="text-foreground flex-1">{filter.name}</span>
             <span className="font-mono text-muted-foreground text-[10px]">

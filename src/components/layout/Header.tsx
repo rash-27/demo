@@ -18,7 +18,7 @@ const navItems: NavItem[] = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-card border-b border-border shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-crisp shadow-sm">
       <div className="flex items-center justify-between px-4 py-2">
         {/* Left Section - Logo & Navigation */}
         <div className="flex items-center space-x-6">
@@ -27,20 +27,19 @@ export function Header() {
             <img src={logo} alt="Techlog Modern Logo" className="w-8 h-8 object-contain" />
             <span className="font-bold text-lg text-foreground">Techlog Modern</span>
           </div>
-          
+
           <Separator orientation="vertical" className="h-6" />
-          
+
           {/* Navigation */}
           <nav className="flex items-center space-x-1">
             {navItems.map((item, index) => (
               <a
                 key={index}
                 href="#"
-                className={`px-3 py-1.5 text-xs font-semibold rounded transition-colors flex items-center gap-1.5 ${
-                  item.active
+                className={`px-3 py-1.5 text-xs font-semibold rounded transition-colors flex items-center gap-1.5 ${item.active
                     ? 'bg-primary text-primary-foreground'
                     : 'text-foreground hover:bg-secondary'
-                }`}
+                  }`}
               >
                 {item.icon}
                 {item.label}

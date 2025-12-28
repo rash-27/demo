@@ -6,7 +6,7 @@ import { wellsData } from '@/data/mockData';
 
 export function MainContent() {
   return (
-    <main className="flex-1 min-h-0 bg-background overflow-y-auto">
+    <main className="flex-1 min-h-0 bg-lightgrey overflow-y-auto">
       <div className="p-6">
         <UploadZone />
         <Toolbar />

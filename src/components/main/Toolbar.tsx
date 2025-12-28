@@ -11,7 +11,7 @@ import { Label } from '@/components/ui/label';
 
 export function Toolbar() {
   return (
-    <div className="bg-card border border-border rounded-lg p-3 mb-4 relative z-10">
+    <div className="bg-white border border-crisp rounded-lg p-3 mb-4 relative z-10">
       <div className="flex items-center justify-between">
         {/* Left Section - Sorting & Display */}
         <div className="flex items-center space-x-3">
